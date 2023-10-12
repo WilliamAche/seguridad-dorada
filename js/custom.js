@@ -26,6 +26,7 @@
             }
         }
     };
+
     $(document).ready(function() {
         $(window).on('load', function() {
             $('.preloader').fadeOut();
@@ -174,6 +175,8 @@
         }).on('click', '.next-section', function() {
             fullpage_api.moveSectionDown();
         });
+
+        
         $('.facts-row').on('inview', function(event, isInView) {
             $('.count-number').each(function() {
                 $(this).prop('Counter', 0).animate({
@@ -200,3 +203,15 @@
         });
     });
 })(jQuery, window, document);
+
+
+$(function() {
+    const header = $("#header");
+  
+    header.hide();
+  
+    $('.btn-scroll').click(function (e) { 
+      header.show("fast");
+    });
+
+  });
