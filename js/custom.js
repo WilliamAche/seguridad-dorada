@@ -211,7 +211,19 @@ $(function() {
     header.hide();
   
     $('.btn-scroll').click(function (e) { 
-      header.show("fast");
+        header.show("fast");
     });
 
-  });
+    window.addEventListener('popstate', function() {
+        // Obtiene el valor de la URL
+        var url = window.location.href;
+
+        // Verifica si la URL contiene el fragmento `#slide01` para ocultarlo
+        if (url.indexOf('#slide01') !== -1) {
+            header.hide();
+        }else{
+            header.show("fast");
+        }
+    });
+
+});
