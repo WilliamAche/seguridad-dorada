@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="css/responsive.css">
 
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -92,19 +94,21 @@
                             <div class="col-lg-12 wide-col-laptop">
                                 <div class="animate" data-animate="fadeInUp">
                                     <div class="welcome-box">
-                                        <span class="welcome-first animate" data-animate="fadeInUp">Para comenzar el
-                                            curso</span>
-                                        <h1 class="animate" data-animate="fadeInUp">Selecione una opcion</h1>
-                                        <a href="#slide02" class="btn btn-p btn-primary animate btn-select"
-                                            id="guia">Guia</a>
-                                        <a href="#slide02" class="btn btn-s btn-secondary animate btn-select"
-                                            id="simulador">Simulador</a>
-                                        <span class="welcome-first animate mt-5 text-p font-weight-bold d-none guia"
-                                            data-animate="fadeInUp">Necesitas aprender sobre sitios seguros y como
+                                        <div class="mb-5">
+                                            <span class="welcome-first animate" data-animate="fadeInUp">Para comenzar el
+                                                curso</span>
+                                            <h1 class="animate" data-animate="fadeInUp">Selecione una opcion</h1>
+                                            <a href="#slide02" class="btn btn-p btn-primary animate btn-select"
+                                                data-tipo="guia">Guia</a>
+                                            <a href="#slide02" class="btn btn-s btn-secondary animate btn-select"
+                                                data-tipo="simulador">Simulador</a>
+                                        </div>
+                                        <span class="welcome-first animated fadeInUp text-option-btn text-p font-weight-bold d-none guia"
+                                            >Necesitas aprender sobre sitios seguros y como
                                             identificarlos</span>
                                         <span
-                                            class="welcome-first animate mt-5 text-s font-weight-bold d-none simulador"
-                                            data-animate="fadeInUp">Es hora de que apliques todo lo aprendido</span>
+                                            class="welcome-first animated fadeInUp text-option-btn text-s font-weight-bold d-none simulador"
+                                            >Es hora de que apliques todo lo aprendido</span>
                                     </div>
                                 </div>
                             </div>
@@ -231,19 +235,25 @@
 
         $(".btn-select").hover(
             function () {
-                if ($(this).attr("id", "simulador")) {
+                if ($(this).data("tipo") == 'simulador') {
                     $('.simulador').removeClass("d-none");
+                    $('.simulador').fadeIn( "slow" );
                 } else {
                     $('.simulador').addClass("d-none");
                 }
 
-                if ($(this).attr("id", "guia")) {
+                if ($(this).data("tipo") == 'guia') {
                     $('.guia').removeClass("d-none");
                 } else {
                     $('.guia').addClass("d-none");
                 }
             }
         );
+
+        $('.btn-select').mouseleave(function() {
+            $('.simulador').addClass("d-none");
+            $('.guia').addClass("d-none");
+        });
 
         // $( "li.fade" ).hover(function() {
         //   $( this ).fadeOut( 100 );
