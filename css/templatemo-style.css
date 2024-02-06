@@ -43,6 +43,16 @@ body {
   background-size: cover;
 }
 
+.guiaCompra {
+  font: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+  /* background: #222; */
+  background-image: url("../images/Abuelitos_manejando_computadoras_1.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 img {
   border: 0;
   max-width: 100%;
