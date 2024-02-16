@@ -47,12 +47,22 @@
     transition: all 0.2s ease-in-out;
 }
 
-.play-button:hover .fa-play {
-    transform: translate(-50%, -50%) rotate(90deg);
+.play-3 {
+    font-size: 24px;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
 }
 
-.play-button:hover .fa-play-2 {
-    transform: translate(-50%, -50%) rotate(90deg);
+.play-4 {
+    font-size: 24px;
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
 }
 
 .play-5 {
@@ -62,4 +72,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in-out;
+}
+
+.play-6 {
+    font-size: 24px;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+}
+
+.play-button:hover .fa-play {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.play-button:hover .fa-play-2 {
+    transform: translate(-50%, -50%) rotate(90deg);
 }
