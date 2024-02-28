@@ -51,7 +51,9 @@ $('.btn-select').mouseleave(function () {
 //   $( this ).fadeIn( 500 );
 // });
 
-
+document.getElementById("video").addEventListener("ended", function() {
+    console.log("hola");
+});
 
 
 playButton_1.addEventListener('click', () => {
@@ -125,6 +127,8 @@ playButton_6.addEventListener('click', () => {
         playButton_6.querySelector('.fa-play').classList.remove('fa-pause');
     }
 });
+
+
 
 // Escucha el evento hashchange
 // window.addEventListener('hashchange', () => {

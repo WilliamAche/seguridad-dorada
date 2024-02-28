@@ -1,3 +1,4 @@
+/* Estilos generales */
 .text-option-btn {
     position: fixed;
     margin-left: auto;
@@ -6,12 +7,13 @@
     right: 0;
 }
 
+/* Botones personalizados */
 .play-button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #0000008c;
-    color: #fff;
+    color: #ffffff; /* Cambio de color a blanco para mayor claridad */
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -23,70 +25,35 @@
 
     /* Animación al pasar el mouse por encima */
     &:hover {
-        background-color: #fff;
-        color: #000;
+        background-color: #ffffff; /* Cambio de color de fondo a blanco */
+        color: #000000; /* Cambio de color de texto a negro para contraste */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 }
 
-.fa-play {
-    font-size: 24px;
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s ease-in-out;
-}
-
-.play-2 {
-    font-size: 24px;
-    position: absolute;
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s ease-in-out;
-}
-
-.play-3 {
-    font-size: 24px;
-    position: absolute;
-    top: 69%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s ease-in-out;
-}
-
-.play-4 {
-    font-size: 24px;
-    position: absolute;
-    top: 71%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s ease-in-out;
-}
-
-.play-5 {
-    font-size: 24px;
-    position: absolute;
-    top: 74%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s ease-in-out;
-}
-
+/* Iconos FontAwesome */
+.fa-play,
+.play-2,
+.play-3,
+.play-4,
+.play-5,
 .play-6 {
     font-size: 24px;
     position: absolute;
-    top: 72%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     transition: all 0.2s ease-in-out;
 }
 
-.play-button:hover .fa-play {
-    transform: translate(-50%, -50%) rotate(90deg);
-}
+.fa-play { top: 63%; }
+.play-2 { top: 66%; }
+.play-3 { top: 69%; }
+.play-4 { top: 71%; }
+.play-5 { top: 74%; }
+.play-6 { top: 72%; }
 
-.play-button:hover .fa-play-2 {
+/* Rotación de iconos al hover sobre play-button */
+.play-button:hover .fa-play,
+.play-button:hover .play-2 {
     transform: translate(-50%, -50%) rotate(90deg);
 }
